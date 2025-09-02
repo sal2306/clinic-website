@@ -83,7 +83,7 @@ export default function Home() {
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-primary mb-6">
-            Moments from Our Clinic
+            Social Events & Community Outreach
           </h2>
           <Carousel />
         </div>
