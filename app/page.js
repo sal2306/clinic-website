@@ -47,7 +47,7 @@ export default function Home() {
 
         {/* Floating feature cards - only float on md+ */}
         <div className="px-4">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:relative md:-mt-14">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:relative md:-mt-14 place-items-center">
             {features.map((f, i) => {
               const Icon = Icons[f.icon]
               return (
@@ -68,7 +68,7 @@ export default function Home() {
       {/* Events Carousel */}
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-primary mb-6">Moments from Our Clinic</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-primary mb-6">Social Events</h2>
           <Carousel />
         </div>
       </section>
