@@ -30,3 +30,10 @@ body {
     margin-top: 1rem;
   }
 }
+/* ensure hero buttons don't overflow on tiny screens */
+@media (max-width: 480px) {
+  .hero-cta-full { width: 100% !important; display:block; }
+}
+
+/* ensure mobile menu overlay covers everything */
+.mobile-menu-overlay { z-index: 9999; }
