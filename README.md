@@ -43,3 +43,7 @@ The website is fully optimized for desktop, tablet, and mobile devices, designed
 ```bash
 git clone https://github.com/<your-username>/dr-g-ali-clinic.git
 cd dr-g-ali-clinic
+
+### 2. Install Dependencies
+```bash
+npm install
