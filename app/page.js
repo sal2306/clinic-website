@@ -58,7 +58,7 @@ export default function Home() {
               href="tel:+911234567890"
               className="w-full sm:w-auto text-center px-6 py-3 bg-accent text-white font-semibold rounded-lg shadow hover:bg-green-600 transition"
             >
-              📞 +91 12345 67890
+              📞 06422 359047
             </a>
             <a
               href="/contact"
