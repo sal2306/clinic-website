@@ -12,12 +12,12 @@ export default function ContactPage() {
 
         <div className="flex-1 bg-white p-8 rounded-2xl shadow-xl">
           <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
-          <p className="mb-3"><strong>Phone:</strong> +91 12345 67890</p>
-          <p className="mb-3"><strong>Email:</strong> example@clinic.com</p>
+          <p className="mb-3"><strong>Phone:</strong> 06422 359047</p>
+          <p className="mb-3"><strong>Email:</strong> dr.nikhatali@gmail.com</p>
           <p className="mb-3"><strong>Address:</strong> Dr G Ali Clinic, Godda, Jharkhand, India</p>
           <div className="mt-6 flex gap-3">
-            <a href="tel:+911234567890" className="px-4 py-2 bg-accent text-white rounded">Call Now</a>
-            <a href="mailto:example@clinic.com" className="px-4 py-2 bg-primary text-white rounded">Email</a>
+            <a href="tel:06422359047" className="px-4 py-2 bg-accent text-white rounded">Call Now</a>
+            <a href="mailto:dr.nikhatali@gmail.com" className="px-4 py-2 bg-primary text-white rounded">Email</a>
           </div>
         </div>
       </div>
