@@ -56,7 +56,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
               href="tel:+911234567890"
-              className="w-full sm:w-auto text-center px-6 py-3 bg-accent text-white font-semibold rounded-lg shadow hover:bg-orange-600 transition"
+              className="w-full sm:w-auto text-center px-6 py-3 bg-accent text-white font-semibold rounded-lg shadow hover:bg-green-600 transition"
             >
               📞 +91 12345 67890
             </a>
@@ -127,7 +127,7 @@ export default function Home() {
           <div className="text-center mt-6">
             <a
               href="/services"
-              className="px-6 py-3 bg-accent text-white rounded-lg font-semibold"
+              className="px-6 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-green-600"
             >
               View All Services
             </a>
