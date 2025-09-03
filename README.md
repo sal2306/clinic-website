@@ -138,6 +138,3 @@ dr-g-ali-clinic/
 
 This project is provided for **educational / demo** purposes. You may adapt and reuse it for your own clinic or small business projects. No warranty is provided — use at your own risk.
 
----
-
-*If you want, I can also create a separate `LICENSE` file (MIT, Apache-2.0, etc.) — tell me which license you prefer and I'll add it.*
