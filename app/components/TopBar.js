@@ -13,7 +13,7 @@ export default function TopBar() {
             <Mail className="w-4 h-4" /> <span>dr.nikhatali@gmail.com</span>
           </a>
         </div>
-        <div className="text-xs md:text-sm">Timings:- Mon–Sat:9AM–8PM, Sun:9AM-2PM</div>
+        <div className="text-xs md:text-sm">Timings:- Mon–Sat: 9AM–8PM, Sun: 9AM-2PM</div>
       </div>
     </div>
   )
