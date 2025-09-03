@@ -31,26 +31,28 @@ export default function Home() {
         style={{ backgroundImage: "url('/images/backgrounds/bg-hero.jpg')" }}
       >
         {/* Gradient overlay */}
-          {/* Clinic Name */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/70"></div>
+
+        <div className="relative z-10 max-w-3xl mx-auto px-6">
+          {/* Clinic Name with underline */}
           <div className="mb-4">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white">
               Dr G Ali Clinic
             </h2>
-            {/* Accent underline */}
             <div className="mt-2 w-20 h-1 bg-accent mx-auto rounded-full"></div>
           </div>
-            
+
           {/* Tagline */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">
             Healing with Care and Compassion
           </h1>
-            
+
           {/* Sub tagline */}
           <p className="text-sm md:text-lg mb-5 text-white/90">
             Trusted Homeopathy Treatments for Chronic & Acute Conditions
           </p>
 
-
+          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
               href="tel:+911234567890"
@@ -93,7 +95,7 @@ export default function Home() {
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-primary mb-6">
-            Social Events & Community Outreach
+            Moments from Our Clinic
           </h2>
           <Carousel />
         </div>

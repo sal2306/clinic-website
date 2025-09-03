@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       colors: {
         primary: '#34495e',  // calm professional blue
-        accent: '#ff7043',   // coral accent
+        accent: '#22c55e',   // coral accent
         subtle: '#f3f7fb'
       }
     }
