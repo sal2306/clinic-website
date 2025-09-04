@@ -1,4 +1,4 @@
-# 🌿 Dr G Ali Clinic Website
+# 🌿 Health Clinic Website
 
 ![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge\&logo=next.js)
 ![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge\&logo=react\&logoColor=white)
@@ -6,7 +6,7 @@
 ![Lucide React](https://img.shields.io/badge/Icons-LUCIDE-8A2BE2?style=for-the-badge\&logo=react\&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-black?style=for-the-badge\&logo=vercel)
 
-A modern, responsive, and professional website for **Dr G Ali Clinic** built with **Next.js**, **Tailwind CSS**, and deployed on **Vercel**. The site is designed mobile-first and optimized for accessibility and performance.
+A modern, responsive, and professional website for **Health Clinic** built with **Next.js**, **Tailwind CSS**, and deployed on **Vercel**. The site is designed mobile-first and optimized for accessibility and performance.
 
 ---
 
