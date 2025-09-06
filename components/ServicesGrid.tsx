@@ -1,18 +1,21 @@
 'use client'
 import FlipCard from './FlipCard'
-import { Zap, Waves, Heart } from 'lucide-react'
+import specialities from '../data/specialities'
+import { Zap, Waves, Heart, Baby, Stethoscope, Users, Pill } from 'lucide-react'
 
-export default function ServicesGrid(){
-  const services = [
-    {id:'gout', title:'Gout Arthritis', desc:'Holistic remedies for joint pain and gout symptoms.', Icon:Zap},
-    {id:'sciatica', title:'Sciatica', desc:'Targeted homeopathy to relieve nerve pain & improve mobility.', Icon:Waves},
-    {id:'skin', title:'Skin Disorders', desc:'Safe, natural care for eczema, psoriasis and rashes.', Icon:Heart},
-  ]
+const iconMap = { zap: Zap, wave: Waves, heart: Heart, baby: Baby, stethoscope: Stethoscope, users: Users, pill: Pill }
+
+export default function ServicesGrid() {
   return (
-    <section className="py-6">
-      <h2 className="text-2xl font-semibold text-blue-800 text-center">Our Key Specialities</h2>
-      <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-6">
-        {services.map(s=> <FlipCard key={s.id} Icon={s.Icon} title={s.title} summary={s.desc} points={['Personalized plans','Care continuity','Follow up']} />)}
+    <section className="py-12 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-2xl font-bold text-blue-800 text-center mb-8">Our Specialities</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {specialities.map((s) => {
+            const Icon = iconMap[s.icon] ?? Zap
+            return <FlipCard key={s.id} Icon={Icon} title={s.title} summary={s.tagline} points={s.details} />
+          })}
+        </div>
       </div>
     </section>
   )

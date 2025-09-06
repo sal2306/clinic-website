@@ -110,3 +110,13 @@ a, button {
 
 /* small accessibility focus */
 :focus { outline: 3px solid rgba(59,130,246,0.12); outline-offset: 3px; }
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  display: flex;
+  animation: scroll 25s linear infinite;
+}

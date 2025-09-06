@@ -1,32 +1,31 @@
+// components/FlipCard.tsx (minimal compatible version)
 'use client'
 import { useState } from 'react'
+import { CheckCircle } from 'lucide-react'
 
-export default function FlipCard({ Icon, title, summary, points }:{Icon:any, title:string, summary:string, points:string[]}) {
+export default function FlipCard({ Icon, title, summary, points }){
   const [flipped, setFlipped] = useState(false)
-
   return (
-    <div className="flip-wrapper">
-      <div
-        role="button"
-        tabIndex={0}
-        className={`card ${flipped? 'flipped':''}`}
-        onClick={()=>setFlipped(s=>!s)}
-        onKeyDown={(e)=> { if(e.key === 'Enter') setFlipped(s=>!s) }}
-        aria-pressed={flipped}
-      >
-        {/* front */}
-        <div className="absolute inset-0 flex flex-col justify-center items-center rounded-xl bg-gray-50 shadow-md border border-gray-200 hover:border-blue-600 transition-colors backface-hidden p-6">
-          {Icon && <Icon className="w-10 h-10 text-blue-600 mb-3" />}
-          <h3 className="text-lg font-semibold text-blue-800 text-center">{title}</h3>
-          <p className="text-slate-600 mt-2 text-center">{summary}</p>
+    <div className="relative w-full cursor-pointer" onClick={()=>setFlipped(s=>!s)} tabIndex={0} onKeyDown={(e)=> e.key==='Enter' && setFlipped(s=>!s)}>
+      <div className={`relative transition-transform duration-500 [transform-style:preserve-3d] ${flipped ? '[transform:rotateY(180deg)]' : ''}`}>
+        <div className="rounded-xl bg-gray-50 border border-gray-200 shadow-sm p-6 [backface-visibility:hidden]">
+          {Icon && <Icon className="w-8 h-8 text-blue-600 mb-3" />}
+          <h3 className="text-lg font-semibold text-blue-800">{title}</h3>
+          {summary && <p className="text-gray-700 mt-2">{summary}</p>}
         </div>
 
-        {/* back */}
-        <div className="card-face card-back">
-          <ul className="list-disc list-inside text-slate-700 space-y-2">
-            {points.map((p,i)=><li key={i}>{p}</li>)}
-          </ul>
-          <div className="mt-4 text-sm text-blue-700">Tap/click to flip back</div>
+        <div className="absolute inset-0 rounded-xl bg-gray-100 border border-gray-200 shadow-sm p-6 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+          <h3 className="text-lg font-semibold text-blue-800 mb-3">{title}</h3>
+          <div className="overflow-auto max-h-[52vh]">
+            <ul className="space-y-3">
+              {points.map((p,i)=>(
+                <li key={i} className="flex items-start gap-3 text-gray-700">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5" />
+                  <span className="text-sm">{p}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>

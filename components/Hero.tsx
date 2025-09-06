@@ -1,54 +1,69 @@
 'use client'
-import Link from "next/link";
+import Link from 'next/link'
+import Image from 'next/image'
+import FeatureGrid from './FeatureGrid'
 
 export default function Hero() {
   return (
-    <section className="relative bg-hero bg-cover bg-center py-16">
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-        {/* Left side text */}
+    <header className="page-bg-hero relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-8 items-center relative z-10">
+        {/* left text */}
         <div>
-          <p className="text-blue-700 font-semibold mb-2">
-            Trusted Homeopathic Care - Since 1981
-          </p>
-          <h1 className="text-4xl md:text-5xl text-blue-900 mb-6">
-            Specialized Care for your Health & Well-being
+          <h1 className="text-4xl md:text-5xl font-bold text-blue-500 leading-tight mb-4">
+            Trusted homeopathy clinic serving generations with care
           </h1>
-          <p className="text-gray-700 mb-6">
-            Compassionate, research-aware homeopathy for chronic & acute
-            conditions. Personalised plans, gentle remedies, long-term support.
+
+          <p className="text-slate-700 font-bold mb-6 max-w-prose">
+            Specialized treatment for acute and chronic ailments – personalized plans and long-term support.
           </p>
 
-          {/* Info grid */}
-          <div className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-200">
-            <h3 className="text-blue-800 font-semibold mb-2">
-              For appointments & enquiries
-            </h3>
-            <div className="flex gap-3">
-              <Link
-                href="tel:+919876543210"
-                className="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 text-sm"
-              >
-                Call Now
-              </Link>
-              <Link
-                href="mailto:info@drgaliclinic.com"
-                className="px-4 py-2 rounded-md bg-white border border-blue-200 text-blue-700 hover:bg-blue-50 text-sm"
-              >
-                Email Us
-              </Link>
-            </div>
+          <p className="text-slate-700 font-semibold mb-6 max-w-prose">
+            For appointments & enquiries:
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-wrap gap-3 mb-6">
+            <a
+              href="tel:+916422359047"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-blue-500 text-white font-semibold shadow-sm hover:scale-[1.02] transition-transform"
+            >
+              Call Us
+            </a>
+
+            <a
+              href="mailto:dr.nikhatali@gmail.com"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-white text-blue-500 font-semibold shadow-sm hover:scale-[1.02] transition-transform"
+            >
+              Email Us
+            </a>
           </div>
         </div>
-
-        {/* Right side image */}
-        <div className="flex justify-center md:justify-end md:ml-2">
-          <img
-            src="/images/hero.png"
-            alt="Dr G Ali speaking"
-            className="rounded-2xl shadow-md max-h-[400px] object-cover"
-          />
-        </div>
       </div>
-    </section>
-  );
+
+      {/* Doctor photo floating on right, transparent background */}
+      <div className="absolute right-40 bottom-0 md:bottom-[-20px] w-[380px] md:w-[500px] z-0">
+        <Image
+          src="/images/hero.png"
+          alt="Dr G Ali"
+          width={500}
+          height={700}
+          className="object-contain pointer-events-none"
+          priority
+        />
+      </div>
+
+
+      {/* FeatureGrid - keep only one */}
+      <div className="relative z-20 -mt-10 max-w-7xl mx-auto px-6 md:px-0">
+        <FeatureGrid />
+      </div>
+
+      {/* curved SVG divider */}
+      <div className="pointer-events-none relative z-10">
+        <svg viewBox="0 0 1440 100" className="w-full block" preserveAspectRatio="none">
+          <path d="M0,100 C320,0 1120,0 1440,100 L1440,0 L0,0 Z" fill="#ffffff" />
+        </svg>
+      </div>
+    </header>
+  )
 }
