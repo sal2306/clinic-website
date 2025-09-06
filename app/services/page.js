@@ -1,23 +1,24 @@
-import Navbar from "../components/Navbar.client";
-import Footer from "../components/Footer.client";
-import services from "../../data/services";
+import * as Icons from "lucide-react"
+import { services } from "../data/services"
 
-export default function ServicesPage(){
+export default function ServicesPage() {
   return (
-    <>
-      <Navbar />
-      <main className="container" style={{padding:30}}>
-        <h1 className="section-title">Services</h1>
-        <div style={{marginTop:12, display:'grid', gap:12}}>
-          {services.map(s=>(
-            <div key={s.id} className="card">
-              <h3 style={{margin:0}}>{s.title}</h3>
-              <p className="muted-sm">{s.description || ''}</p>
-            </div>
-          ))}
+    <section className="py-20" style={{ backgroundImage: "url('/images/backgrounds/bg-middle.jpg')" }}>
+      <div className="max-w-6xl mx-auto px-6 bg-white/90 rounded-2xl p-8 shadow-xl">
+        <h1 className="text-3xl font-bold text-primary mb-6">Our Services</h1>
+        <div className="grid md:grid-cols-3 gap-6">
+          {services.map((s, idx) => {
+            const Icon = Icons[s.icon]
+            return (
+              <div key={idx} className="bg-white p-6 rounded-xl shadow hover:shadow-xl transition transform hover:-translate-y-2 text-center">
+                <div className="mb-4">{Icon ? <Icon className="w-12 h-12 text-accent" /> : null}</div>
+                <h3 className="font-semibold">{s.title}</h3>
+                <p className="text-sm text-gray-600 mt-2">{s.desc}</p>
+              </div>
+            )
+          })}
         </div>
-      </main>
-      <Footer />
-    </>
-  );
+      </div>
+    </section>
+  )
 }
