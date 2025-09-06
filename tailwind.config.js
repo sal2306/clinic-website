@@ -4,6 +4,7 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}'
   ],
+<<<<<<< HEAD
   theme: {
     extend: {
       colors: {
@@ -14,4 +15,8 @@ module.exports = {
     }
   },
   plugins: []
+=======
+  theme: { extend: {} },
+  plugins: [require('@tailwindcss/typography')],
+>>>>>>> feature/update-website
 }

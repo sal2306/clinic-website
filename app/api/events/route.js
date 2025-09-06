@@ -1,18 +1,23 @@
+// app/api/events/route.js
+import { NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
 
 export async function GET() {
   try {
     const eventsDir = path.join(process.cwd(), 'public', 'images', 'events')
+
     if (!fs.existsSync(eventsDir)) {
-      return new Response(JSON.stringify([]), { status: 200, headers: {'Content-Type':'application/json'} })
+      return NextResponse.json({ images: [] })
     }
+
     const files = fs.readdirSync(eventsDir)
-    const supported = files.filter(f => /\.(png|jpe?g|webp|gif)$/i.test(f))
-    const urls = supported.map(f => `/images/events/${f}`)
-    return new Response(JSON.stringify(urls), { status: 200, headers: { 'Content-Type': 'application/json' } })
+      .filter((f) => /\.(jpe?g|png|webp|avif|gif)$/i.test(f))
+      .map((f) => `/images/events/${f}`)
+
+    return NextResponse.json({ images: files })
   } catch (err) {
-    console.error(err)
-    return new Response(JSON.stringify([]), { status: 500, headers: { 'Content-Type': 'application/json' } })
+    console.error('Events API error:', err)
+    return NextResponse.json({ images: [] })
   }
 }
